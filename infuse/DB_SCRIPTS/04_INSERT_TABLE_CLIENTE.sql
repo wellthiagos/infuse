@@ -1,0 +1,12 @@
+use infuse_db;
+
+INSERT INTO CLIENTE (NOME) VALUES ('Abraham Lincoln');
+INSERT INTO CLIENTE (NOME) VALUES ('Thomas Edison');
+INSERT INTO CLIENTE (NOME) VALUES ('Alberto Santos Dumont');
+INSERT INTO CLIENTE (NOME) VALUES ('Marco Aurélio');
+INSERT INTO CLIENTE (NOME) VALUES ('Sigmund Freud');
+INSERT INTO CLIENTE (NOME) VALUES ('Ralph Waldo Emerson');
+INSERT INTO CLIENTE (NOME) VALUES ('Walt Whitman');
+INSERT INTO CLIENTE (NOME) VALUES ('Stanley Kubrick');
+INSERT INTO CLIENTE (NOME) VALUES ('Martin Luther King Jr');
+INSERT INTO CLIENTE (NOME) VALUES ('Leonardo da Vinci');

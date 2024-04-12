@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "d946d6f5-bdd7-48c2-992f-6d42f6a53b35",
+		"name": "Infuse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7257178",
+		"_collection_link": "https://galactic-shuttle-332763.postman.co/workspace/Pessoal~98c6a85c-8c65-4e0d-a654-a9d6b47fe77a/collection/7257178-d946d6f5-bdd7-48c2-992f-6d42f6a53b35?action=share&source=collection_link&creator=7257178"
+	},
+	"item": [
+		{
+			"name": "Salvar Pedidos JSON",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pedidos\": [\r\n        {\r\n            \"numeroControle\": 1,\r\n            \"nomeProduto\": \"Macarrão\",\r\n            \"valorUnitario\": 10.00,\r\n            \"quantidade\": 11,\r\n            \"dataCadastro\": \"2024-04-11\",\r\n            \"cliente\": {\r\n                \"id\": 50\r\n            }\r\n        },\r\n        {\r\n            \"numeroControle\": 2,\r\n            \"nomeProduto\": \"Arroz\",\r\n            \"valorUnitario\": 15.00,\r\n            \"quantidade\": 7,\r\n            \"cliente\": {\r\n                \"id\": 2\r\n            }\r\n        },\r\n        {\r\n            \"numeroControle\": 3,\r\n            \"nomeProduto\": \"Ovo\",\r\n            \"valorUnitario\": 12.00,\r\n            \"quantidade\": 3,\r\n            \"cliente\": {\r\n                \"id\": 2\r\n            }\r\n        },\r\n        {\r\n            \"numeroControle\": 4,\r\n            \"nomeProduto\": \"Carne\",\r\n            \"valorUnitario\": 50.00,\r\n            \"cliente\": {\r\n                \"id\": 2\r\n            }\r\n        },\r\n        {\r\n            \"numeroControle\": 5,\r\n            \"nomeProduto\": \"Cerveja\",\r\n            \"valorUnitario\": 35.00,\r\n            \"quantidade\": 1,\r\n            \"cliente\": {\r\n                \"id\": 2\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SalvarPedidos XML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<PedidoListDTO>\r\n    <pedidos>\r\n        <pedido>\r\n            <numeroControle>6</numeroControle>\r\n            <nomeProduto>Maçã</nomeProduto>\r\n            <valorUnitario>2</valorUnitario>\r\n            <quantidade>7</quantidade>\r\n            <cliente>\r\n                <id>10</id>\r\n            </cliente>\r\n        </pedido>\r\n        <pedido>\r\n            <numeroControle>7</numeroControle>\r\n            <nomeProduto>Banana</nomeProduto>\r\n            <valorUnitario>1</valorUnitario>\r\n            <quantidade>20</quantidade>\r\n            <cliente>\r\n                <id>5</id>\r\n            </cliente>\r\n        </pedido>\r\n        <pedido>\r\n            <numeroControle>8</numeroControle>\r\n            <nomeProduto>Pepino</nomeProduto>\r\n            <valorUnitario>3</valorUnitario>\r\n            <dataCadastro>2024-04-11</dataCadastro>\r\n            <cliente>\r\n                <id>6</id>\r\n            </cliente>\r\n        </pedido>\r\n    </pedidos>\r\n</PedidoListDTO>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Pedidos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<PedidoListDTO>\r\n    <pedidos>\r\n        <pedido>\r\n            <numeroControle>6</numeroControle>\r\n            <nomeProduto>Maçã</nomeProduto>\r\n            <valorUnitario>2</valorUnitario>\r\n            <quantidade>7</quantidade>\r\n            <cliente>\r\n                <id>10</id>\r\n            </cliente>\r\n        </pedido>\r\n        <pedido>\r\n            <numeroControle>7</numeroControle>\r\n            <nomeProduto>Banana</nomeProduto>\r\n            <valorUnitario>1</valorUnitario>\r\n            <quantidade>20</quantidade>\r\n            <cliente>\r\n                <id>5</id>\r\n            </cliente>\r\n        </pedido>\r\n        <pedido>\r\n            <numeroControle>8</numeroControle>\r\n            <nomeProduto>Pepino</nomeProduto>\r\n            <valorUnitario>3</valorUnitario>\r\n            <dataCadastro>2024-04-11</dataCadastro>\r\n            <cliente>\r\n                <id>6</id>\r\n            </cliente>\r\n        </pedido>\r\n    </pedidos>\r\n</PedidoListDTO>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
